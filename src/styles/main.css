@@ -1,0 +1,16 @@
+.backgroundimage {
+    background-image: url(../images/resturant.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#homeCard {
+    background-color: white;
+    width: 50vw;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 10px solid transparent;
+    border-image: url(../images/floral-4106637_1280.png) 90 stretch;
+}
