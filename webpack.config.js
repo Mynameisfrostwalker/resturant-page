@@ -4,7 +4,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        index: './src/scripts/index.js',
+        pageload: './src/scripts/pageload.js',
+    },
     devtool: 'inline-source-map',
     plugins: [
         new HTMLWebpackPlugin({
@@ -14,9 +17,14 @@ module.exports = {
         new MiniCssExtractPlugin(),
     ],
     output: {
-        filename: 'main.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+    },
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+        },
     },
     module: {
         rules: [{
