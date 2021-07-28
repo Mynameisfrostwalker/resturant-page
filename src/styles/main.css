@@ -1,3 +1,8 @@
+body {
+    font-size: 1.6rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .backgroundimage {
     background-image: url(../images/resturant.jpeg);
     background-repeat: no-repeat;
@@ -8,9 +13,40 @@
 #homeCard {
     background-color: white;
     width: 50vw;
-    margin: 0 auto;
+    margin: 7rem auto;
     padding: 1rem;
     border-radius: 10px;
     border: 10px solid transparent;
     border-image: url(../images/floral-4106637_1280.png) 90 stretch;
+    height: auto;
+}
+
+#Homeheader {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#tab-content {
+    width: 100vw;
+    color: white;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 1rem;
+}
+
+#tab-content ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#tab-content ul li {
+    list-style-type: none;
+}
+
+#tab-content ul li:hover {
+    cursor: pointer;
+    color: rgb(255, 109, 133);
 }
