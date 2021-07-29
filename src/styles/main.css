@@ -39,6 +39,7 @@ body {
     margin-bottom: 1rem;
     height: 2rem;
     padding: 1rem;
+    z-index: 10;
 }
 
 #tab-content ul {
@@ -76,10 +77,6 @@ img {
     position: relative;
 }
 
-#pizzaimg {
-    border-radius: 50px;
-}
-
 #pizzaimg::after {
     content: 'The deliciously divine pizza';
     background-color: black;
@@ -96,7 +93,7 @@ img {
 }
 
 img:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .texts {
