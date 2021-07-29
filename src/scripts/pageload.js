@@ -15,7 +15,13 @@ const navCreate = (
         tab3li.setAttribute('id', 'tab3li');
         tab3li.textContent = 'Contact';
         const create = () => {
-            tab1li.style.color = 'red';
+            tab1li.classList.add('active');
+            if (tab2li.classList.contains('active')) {
+                tab2li.classList.remove('active');
+            }
+            if (tab3li.classList.contains('active')) {
+                tab3li.classList.remove('active');
+            }
             tabUl.appendChild(tab1li);
             tabUl.appendChild(tab2li);
             tabUl.appendChild(tab3li);
@@ -69,4 +75,4 @@ const initialPage = (
     }
 )()
 
-export default initialPage
+export { initialPage, navCreate, main }

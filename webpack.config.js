@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         index: './src/scripts/index.js',
         pageload: './src/scripts/pageload.js',
+        menu: './src/scripts/menu.js',
     },
     devtool: 'inline-source-map',
     plugins: [

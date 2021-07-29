@@ -10,7 +10,8 @@ body {
     background-attachment: fixed;
 }
 
-#homeCard {
+#homeCard,
+#menuCard {
     background-color: white;
     width: 50vw;
     margin: 7rem auto;
@@ -19,6 +20,7 @@ body {
     border: 10px solid transparent;
     border-image: url(../images/floral-4106637_1280.png) 90 stretch;
     height: auto;
+    transition: 0.5s all;
 }
 
 #Homeheader {
@@ -35,6 +37,8 @@ body {
     top: 0;
     left: 0;
     margin-bottom: 1rem;
+    height: 2rem;
+    padding: 1rem;
 }
 
 #tab-content ul {
@@ -49,4 +53,62 @@ body {
 #tab-content ul li:hover {
     cursor: pointer;
     color: rgb(255, 109, 133);
+}
+
+.active,
+.active:hover {
+    color: red !important;
+    cursor: default !important;
+}
+
+.exit {
+    transform: translateX(40rem);
+    transform: scale(2);
+    opacity: 0.1;
+}
+
+img {
+    width: 45vw;
+    height: 30vh;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+#pizzaimg {
+    border-radius: 50px;
+}
+
+#pizzaimg::after {
+    content: 'The deliciously divine pizza';
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 45vw;
+}
+
+#pizzaimg::after:hover {
+    opacity: 1;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+.texts {
+    text-align: center;
+}
+
+.texts:hover {
+    color: plum;
+    cursor: default;
+}
+
+.food {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
