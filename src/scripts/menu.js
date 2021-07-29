@@ -1,14 +1,17 @@
 import '../styles/main.css'
 import { navCreate, main } from './pageload.js'
+import { createContactCard } from './contact.js';
 
 const changeActive = (
     function() {
         const change = () => {
             if (navCreate.tab.children[0].children[0].classList.contains('active')) {
                 navCreate.tab.children[0].children[0].classList.remove('active');
+                removePrevCard.home()
             }
             if (navCreate.tab.children[0].children[2].classList.contains('active')) {
                 navCreate.tab.children[0].children[2].classList.remove('active');
+                removePrevCard.contact()
             }
             navCreate.tab.children[0].children[1].classList.add('active');
         }
@@ -18,14 +21,21 @@ const changeActive = (
 
 const removePrevCard = (
     function() {
-        const remove = () => {
+        const home = () => {
             main.homeCard.classList.add('exit');
             setTimeout(() => {
                 main.homeCard.remove()
                 main.homeCard.classList.remove('exit');
             }, 500);
         }
-        return { remove }
+        const contact = () => {
+            createContactCard.contactCard.classList.add('exit');
+            setTimeout(() => {
+                createContactCard.contactCard.remove()
+                createContactCard.contactCard.classList.remove('exit');
+            }, 500);
+        }
+        return { home, contact }
     }
 )()
 
@@ -71,7 +81,6 @@ const menu = (
         const content = document.querySelector('div#content');
         const create = () => {
             changeActive.change();
-            removePrevCard.remove();
             createMenuCard.create();
             setTimeout(() => { content.appendChild(createMenuCard.menuCard) }, 500)
         }

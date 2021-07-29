@@ -9,6 +9,7 @@ module.exports = {
         pageload: './src/scripts/pageload.js',
         menu: './src/scripts/menu.js',
         homepage: './src/scripts/homepage.js',
+        contact: './src/scripts/contact.js',
     },
     devtool: 'inline-source-map',
     plugins: [
