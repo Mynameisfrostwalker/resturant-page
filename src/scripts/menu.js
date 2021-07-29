@@ -79,4 +79,4 @@ const menu = (
     }
 )()
 
-export { menu }
+export { menu, createMenuCard }
