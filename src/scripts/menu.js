@@ -1,6 +1,9 @@
 import '../styles/main.css'
 import { navCreate, main } from './pageload.js'
 import { createContactCard } from './contact.js';
+import Pizza from '../images/pizza.jpeg'
+import Truffles from '../images/truffles.jpeg'
+import Caviar from '../images/caviar.jpg'
 
 const changeActive = (
     function() {
@@ -43,16 +46,15 @@ const createDivs = (name, src, words, description) => {
     name = document.createElement('div');
     name.setAttribute('id', `${description}Div`);
     name.classList.add('food');
-    const img = document.createElement('img');
-    img.setAttribute('id', `${description}img`);
-    img.setAttribute('src', src);
-    img.setAttribute('alt', `Image of ${description}`);
-    img.classList.add('images')
+    const myImg = new Image();
+    myImg.id = `${description}img`;
+    myImg.src = src;
+    myImg.alt = `Image of ${description}`;
     const text = document.createElement('p');
     text.setAttribute('id', `${description}text`)
     text.textContent = words;
     text.classList.add('texts')
-    name.appendChild(img);
+    name.appendChild(myImg);
     name.appendChild(text);
     return { name }
 }
@@ -64,9 +66,9 @@ const createMenuCard = (
         const pizza = undefined;
         const caviar = undefined;
         const truffles = undefined;
-        let pizzaDiv = createDivs(pizza, '../src/images/pizza.jpeg', 'La pizza délicieusement divine', 'pizza').name;
-        let caviarDiv = createDivs(caviar, '../src/images/caviar.jpg', 'Le caviar du haut des cieux', 'caviar').name;
-        let trufflesDiv = createDivs(truffles, '../src/images/truffles.jpeg', 'La bonté terrestre des reins de la terre', 'truffles').name;
+        let pizzaDiv = createDivs(pizza, Pizza, 'La pizza délicieusement divine', 'pizza').name;
+        let caviarDiv = createDivs(caviar, Caviar, 'Le caviar du haut des cieux', 'caviar').name;
+        let trufflesDiv = createDivs(truffles, Truffles, 'La bonté terrestre des reins de la terre', 'truffles').name;
         const create = () => {
             menuCard.appendChild(pizzaDiv);
             menuCard.appendChild(caviarDiv);
