@@ -1,4 +1,3 @@
-import '../styles/main.css'
 import { navCreate, main } from './pageload.js'
 import { createContactCard } from './contact.js';
 import Pizza from '../images/pizza.jpeg'

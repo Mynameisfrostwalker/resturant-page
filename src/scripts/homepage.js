@@ -35,9 +35,11 @@ const home = (
                 navCreate.tab.children[0].children[2].classList.remove('active');
                 removePrevCard.contact();
             }
-            navCreate.tab.children[0].children[0].classList.add('active');
-            main.create();
-            content.appendChild(main.homeCard)
+            setTimeout(() => {
+                navCreate.tab.children[0].children[0].classList.add('active');
+                main.create();
+                content.appendChild(main.homeCard)
+            }, 500);
         }
         return { create }
     }

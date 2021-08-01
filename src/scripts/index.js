@@ -1,3 +1,4 @@
+import '../styles/main.css';
 import { initialPage, navCreate } from './pageload.js'
 import { menu } from './menu'
 import { home } from './homepage.js'

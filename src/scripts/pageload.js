@@ -1,5 +1,3 @@
-import '../styles/main.css'
-
 const navCreate = (
     function() {
         const tab = document.createElement('div');

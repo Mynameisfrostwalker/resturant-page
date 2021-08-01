@@ -19,16 +19,6 @@ module.exports = {
         }),
         new MiniCssExtractPlugin(),
     ],
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
-    },
-    optimization: {
-        splitChunks: {
-            chunks: "all",
-        },
-    },
     module: {
         rules: [{
                 test: /\.css$/i,
@@ -39,5 +29,15 @@ module.exports = {
                 type: 'asset/resource',
             },
         ],
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+        },
     },
 };

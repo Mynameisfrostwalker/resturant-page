@@ -47,6 +47,7 @@ body {
 }
 
 #tab-content ul {
+    width: 100vw;
     display: flex;
     justify-content: space-around;
 }
@@ -54,6 +55,12 @@ body {
 #tab-content ul li {
     list-style-type: none;
     padding: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+    #tab-content ul li {
+        padding: 1rem;
+    }
 }
 
 #tab-content ul li:hover {
